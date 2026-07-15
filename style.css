@@ -589,30 +589,15 @@ body:has(.menu-toggle[aria-expanded="true"]) {
   animation: swing-angle 8s ease-in-out infinite alternate;
 }
 
-.portrait-placeholder {
-  display: grid;
-  place-items: center;
-  gap: 0.25rem;
-  aspect-ratio: 4 / 5;
+.portrait-photo {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  object-position: center 20%;
   border-radius: 27px;
   background:
     radial-gradient(circle at 30% 20%, rgba(149, 191, 71, 0.12), transparent 60%),
     var(--bg-soft);
-
-  & span {
-    font-family: var(--font-display);
-    font-size: 4rem;
-    font-weight: 700;
-    background: linear-gradient(135deg, var(--green), var(--teal));
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-  }
-
-  & small {
-    font-family: var(--font-mono);
-    color: var(--muted);
-  }
 }
 
 .portrait-card {
