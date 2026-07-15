@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Vincenzo Grasso | Shopify Frontend Developer</title>
+  <meta name="description" content="Freelance frontend developer specialized in Shopify: custom themes, headless storefronts and performance optimization.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="scroll-progress" aria-hidden="true"></div>
+  <div class="bg-glow" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="nav-pill">
+      <a class="brand" href="#top" aria-label="Vincenzo Grasso, back to top">
+        <span class="brand-mark">VG</span>
+        <span class="brand-name">vincenzo<em>.dev</em></span>
+      </a>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="#who-am-i">Who am I</a></li>
+          <li><a href="#what-i-do">What I do</a></li>
+          <li><a href="#technologies">Technologies</a></li>
+          <li><a href="#how-can-i-help">How I can help</a></li>
+        </ul>
+      </nav>
+
+      <a class="button button-primary button-small header-cta" href="#how-can-i-help">Let’s talk</a>
+
+      <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <div class="hero-inner">
+
+        <a class="hero-badge reveal" href="#how-can-i-help">
+          <span class="badge-dot" aria-hidden="true"></span>
+          <span class="badge-highlight">Available for new projects</span>
+          <span class="badge-action">Book an intro call →</span>
+        </a>
+
+        <h1 class="hero-title reveal">
+          I build <span class="gradient-text">Shopify storefronts</span><br>
+          that feel instant.
+        </h1>
+
+        <p class="hero-sub reveal">
+          [Placeholder — Freelance frontend developer specialized in Shopify.
+          Custom themes, headless builds and an unhealthy obsession with performance.]
+        </p>
+
+        <div class="hero-actions reveal">
+          <a class="button button-primary" href="#what-i-do">See what I do <span aria-hidden="true">→</span></a>
+          <a class="button button-ghost" href="#who-am-i">More about me</a>
+        </div>
+
+        <div class="hero-trust reveal">
+          <div class="avatar-row" aria-hidden="true">
+            <span class="avatar">A</span>
+            <span class="avatar">B</span>
+            <span class="avatar">C</span>
+            <span class="avatar">D</span>
+            <span class="avatar">+</span>
+          </div>
+          <p>Trusted by <strong>[XX]+ merchants &amp; agencies</strong></p>
+        </div>
+
+        <div class="hero-code reveal" aria-hidden="true">
+          <div class="code-window">
+            <div class="code-bar">
+              <span></span><span></span><span></span>
+              <em>sections/hero.liquid</em>
+            </div>
+            <pre><code><span class="c-tag">{% schema %}</span>
+{
+  <span class="c-key">"name"</span>: <span class="c-str">"Conversion-first hero"</span>,
+  <span class="c-key">"settings"</span>: [
+    { <span class="c-key">"type"</span>: <span class="c-str">"text"</span>, <span class="c-key">"id"</span>: <span class="c-str">"heading"</span> }
+  ]
+}
+<span class="c-tag">{% endschema %}</span>
+
+<span class="c-com">// zero layout shift, 100/100 CWV</span>
+<span class="c-kw">const</span> storefront = <span class="c-fn">await</span> <span class="c-fn">build</span>({ fast: <span class="c-kw">true</span> });</code></pre>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============ TECH MARQUEE ============ -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Shopify</span><span>Liquid</span><span>Hydrogen</span><span>Storefront API</span>
+        <span>React</span><span>TypeScript</span><span>Tailwind CSS</span><span>Vite</span>
+        <span>GSAP</span><span>Core Web Vitals</span><span>Figma</span><span>Metaobjects</span>
+      </div>
+    </div>
+
+    <!-- ============ WHO AM I ============ -->
+    <section class="section" id="who-am-i">
+      <div class="container about-grid">
+        <div class="about-visual reveal">
+          <div class="portrait-frame">
+            <div class="portrait-placeholder">
+              <span>VG</span>
+              <small>[ your photo here ]</small>
+            </div>
+          </div>
+          <div class="portrait-card">
+            <strong>Vincenzo Grasso</strong>
+            <span>Frontend Developer · Shopify specialist</span>
+          </div>
+        </div>
+
+        <div class="about-copy">
+          <p class="eyebrow reveal">Who am I</p>
+          <h2 class="reveal">The developer behind<br>the <span class="gradient-text">storefronts</span>.</h2>
+
+          <p class="reveal">
+            [Placeholder — Two or three sentences about you: your background,
+            how you got into frontend development and why you chose to
+            specialize in the Shopify ecosystem.]
+          </p>
+          <p class="reveal">
+            [Placeholder — What makes you different: your approach to code
+            quality, performance budgets, collaboration with designers and
+            merchants, remote work, etc.]
+          </p>
+
+          <div class="stats-row reveal">
+            <article>
+              <strong data-count>[7]+</strong>
+              <span>years of frontend</span>
+            </article>
+            <article>
+              <strong data-count>[40]+</strong>
+              <span>stores shipped</span>
+            </article>
+            <article>
+              <strong data-count>[95]+</strong>
+              <span>avg. Lighthouse score</span>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ WHAT I DO ============ -->
+    <section class="section" id="what-i-do">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">What I do</p>
+          <h2>Everything a modern<br>Shopify store <span class="gradient-text">needs</span>.</h2>
+        </div>
+
+        <div class="bento-grid">
+          <article class="bento-card bento-large reveal">
+            <span class="card-icon" aria-hidden="true">◈</span>
+            <h3>Custom Shopify themes</h3>
+            <p>[Placeholder — Pixel-perfect themes built from scratch or from Figma designs.
+               Online Store 2.0, JSON templates, flexible sections merchants actually enjoy using.]</p>
+            <ul class="card-tags">
+              <li>Liquid</li><li>OS 2.0</li><li>Sections</li>
+            </ul>
+          </article>
+
+          <article class="bento-card reveal">
+            <span class="card-icon" aria-hidden="true">⚡</span>
+            <h3>Performance &amp; CWV</h3>
+            <p>[Placeholder — Speed audits, refactoring and Core Web Vitals optimization
+               that move the needle on conversion.]</p>
+          </article>
+
+          <article class="bento-card reveal">
+            <span class="card-icon" aria-hidden="true">◍</span>
+            <h3>Headless storefronts</h3>
+            <p>[Placeholder — Hydrogen and Storefront API builds when a theme
+               isn’t enough: custom frontends with app-like UX.]</p>
+          </article>
+
+          <article class="bento-card reveal">
+            <span class="card-icon" aria-hidden="true">✦</span>
+            <h3>Conversion-focused UI</h3>
+            <p>[Placeholder — Landing pages, PDP improvements and A/B-testable
+               sections designed to sell, not just look pretty.]</p>
+          </article>
+
+          <article class="bento-card bento-wide reveal">
+            <span class="card-icon" aria-hidden="true">⇄</span>
+            <h3>Migrations &amp; replatforming</h3>
+            <p>[Placeholder — Moving from WooCommerce, Magento or a legacy theme to Shopify
+               without losing SEO, data or your sanity. Includes redirects, metafields and content mapping.]</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TECHNOLOGIES ============ -->
+    <section class="section" id="technologies">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Technologies</p>
+          <h2>A modern toolbox,<br><span class="gradient-text">sharpened daily</span>.</h2>
+        </div>
+
+        <div class="tech-groups">
+          <div class="tech-group reveal">
+            <h3>Shopify ecosystem</h3>
+            <ul class="chip-list">
+              <li>Liquid</li><li>Online Store 2.0</li><li>Hydrogen</li>
+              <li>Storefront API</li><li>Metaobjects</li><li>Shopify CLI</li><li>Polaris</li>
+            </ul>
+          </div>
+
+          <div class="tech-group reveal">
+            <h3>Languages &amp; frameworks</h3>
+            <ul class="chip-list">
+              <li>HTML</li><li>CSS</li><li>JavaScript</li><li>TypeScript</li>
+              <li>React</li><li>Remix</li><li>Astro</li>
+            </ul>
+          </div>
+
+          <div class="tech-group reveal">
+            <h3>Styling &amp; motion</h3>
+            <ul class="chip-list">
+              <li>Tailwind CSS</li><li>CSS architecture</li><li>GSAP</li>
+              <li>View Transitions</li><li>Scroll-driven animations</li>
+            </ul>
+          </div>
+
+          <div class="tech-group reveal">
+            <h3>Tooling &amp; workflow</h3>
+            <ul class="chip-list">
+              <li>Vite</li><li>Git &amp; GitHub</li><li>Figma</li>
+              <li>Lighthouse CI</li><li>Playwright</li>
+            </ul>
+          </div>
+        </div>
+
+        <aside class="under-the-hood reveal">
+          <div>
+            <p class="eyebrow">Under the hood</p>
+            <h3>This page is the demo.</h3>
+            <p>No frameworks, no build step — just the modern web platform:</p>
+          </div>
+          <ul>
+            <li><code>animation-timeline: view()</code> scroll-driven reveals</li>
+            <li><code>@container</code> queries for the cards</li>
+            <li><code>@property</code> animated gradients</li>
+            <li>Native CSS nesting &amp; <code>:has()</code></li>
+            <li><code>text-wrap: balance</code> headlines</li>
+            <li><code>backdrop-filter</code> glass nav</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ============ HOW CAN I HELP ============ -->
+    <section class="section" id="how-can-i-help">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">How can I help you</p>
+          <h2>From first call<br>to <span class="gradient-text">first sale</span>.</h2>
+        </div>
+
+        <div class="steps-grid">
+          <article class="reveal">
+            <span class="step-number">01</span>
+            <h3>Discovery &amp; audit</h3>
+            <p>[Placeholder — A free intro call to understand your store, your goals
+               and where the quick wins are.]</p>
+          </article>
+          <article class="reveal">
+            <span class="step-number">02</span>
+            <h3>Proposal &amp; plan</h3>
+            <p>[Placeholder — A clear scope, timeline and fixed quote.
+               No surprises, no vague estimates.]</p>
+          </article>
+          <article class="reveal">
+            <span class="step-number">03</span>
+            <h3>Build &amp; launch</h3>
+            <p>[Placeholder — Iterative development with weekly demos,
+               staging previews and a smooth go-live.]</p>
+          </article>
+          <article class="reveal">
+            <span class="step-number">04</span>
+            <h3>Optimize &amp; support</h3>
+            <p>[Placeholder — Post-launch monitoring, CWV tracking and
+               ongoing improvements as your store grows.]</p>
+          </article>
+        </div>
+
+        <div class="cta-panel reveal">
+          <div class="cta-copy">
+            <h3>Have a store that deserves better?</h3>
+            <p>[Placeholder — One line inviting people to reach out. Replace the form with your Calendly / Tally / email of choice.]</p>
+          </div>
+          <form class="cta-form" action="mailto:vincenzograss@gmail.com" method="get">
+            <label class="visually-hidden" for="email">Your email</label>
+            <input id="email" type="email" placeholder="you@yourstore.com" required>
+            <button class="button button-primary" type="submit">Get in touch</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="section section-faq">
+      <div class="container faq-layout">
+        <div class="section-heading reveal">
+          <p class="eyebrow">FAQ</p>
+          <h2>Quick <span class="gradient-text">answers</span>.</h2>
+        </div>
+
+        <div class="faq-list reveal">
+          <details name="faq" open>
+            <summary>Do you work with agencies or directly with merchants?</summary>
+            <p>[Placeholder — Explain who you typically work with and how the collaboration works.]</p>
+          </details>
+          <details name="faq">
+            <summary>Can you improve my existing theme instead of rebuilding it?</summary>
+            <p>[Placeholder — Explain audits, refactors and when a rebuild is actually worth it.]</p>
+          </details>
+          <details name="faq">
+            <summary>How do you price projects?</summary>
+            <p>[Placeholder — Fixed quotes, day rate, retainers… explain your model.]</p>
+          </details>
+          <details name="faq">
+            <summary>Do you offer support after launch?</summary>
+            <p>[Placeholder — Describe your maintenance / support options.]</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand" href="#top">
+          <span class="brand-mark">VG</span>
+          <span class="brand-name">vincenzo<em>.dev</em></span>
+        </a>
+        <p>Shopify frontend development · [Your city], Italy</p>
+      </div>
+
+      <div>
+        <h3>Explore</h3>
+        <a href="#who-am-i">Who am I</a>
+        <a href="#what-i-do">What I do</a>
+        <a href="#technologies">Technologies</a>
+        <a href="#how-can-i-help">How I can help</a>
+      </div>
+
+      <div>
+        <h3>Contact</h3>
+        <a href="mailto:vincenzograss@gmail.com">vincenzograss@gmail.com</a>
+        <a href="#">LinkedIn</a>
+        <a href="#">GitHub</a>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <span>© 2026 Vincenzo Grasso</span>
+      <span>Built with zero frameworks — view source, it’s the portfolio.</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
