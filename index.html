@@ -47,6 +47,7 @@
 
     <!-- ============ HERO ============ -->
     <section class="hero">
+      <canvas class="hero-antigravity" aria-hidden="true"></canvas>
       <div class="hero-inner">
 
         <a class="hero-badge reveal" href="#how-can-i-help">
@@ -214,66 +215,6 @@
       </div>
     </section>
 
-    <!-- ============ TECHNOLOGIES ============ -->
-    <section class="section" id="technologies">
-      <div class="container">
-        <div class="section-heading reveal">
-          <p class="eyebrow">Technologies</p>
-          <h2>A modern toolbox,<br><span class="gradient-text">sharpened daily</span>.</h2>
-        </div>
-
-        <div class="tech-groups">
-          <div class="tech-group reveal">
-            <h3>Shopify ecosystem</h3>
-            <ul class="chip-list">
-              <li>Liquid</li><li>Online Store 2.0</li><li>Hydrogen</li>
-              <li>Storefront API</li><li>Metaobjects</li><li>Shopify CLI</li><li>Polaris</li>
-            </ul>
-          </div>
-
-          <div class="tech-group reveal">
-            <h3>Languages &amp; frameworks</h3>
-            <ul class="chip-list">
-              <li>HTML</li><li>CSS</li><li>JavaScript</li><li>TypeScript</li>
-              <li>React</li><li>Remix</li><li>Astro</li>
-            </ul>
-          </div>
-
-          <div class="tech-group reveal">
-            <h3>Styling &amp; motion</h3>
-            <ul class="chip-list">
-              <li>Tailwind CSS</li><li>CSS architecture</li><li>GSAP</li>
-              <li>View Transitions</li><li>Scroll-driven animations</li>
-            </ul>
-          </div>
-
-          <div class="tech-group reveal">
-            <h3>Tooling &amp; workflow</h3>
-            <ul class="chip-list">
-              <li>Vite</li><li>Git &amp; GitHub</li><li>Figma</li>
-              <li>Lighthouse CI</li><li>Playwright</li>
-            </ul>
-          </div>
-        </div>
-
-        <aside class="under-the-hood reveal">
-          <div>
-            <p class="eyebrow">Under the hood</p>
-            <h3>This page is the demo.</h3>
-            <p>No frameworks, no build step — just the modern web platform:</p>
-          </div>
-          <ul>
-            <li><code>animation-timeline: view()</code> scroll-driven reveals</li>
-            <li><code>@container</code> queries for the cards</li>
-            <li><code>@property</code> animated gradients</li>
-            <li>Native CSS nesting &amp; <code>:has()</code></li>
-            <li><code>text-wrap: balance</code> headlines</li>
-            <li><code>backdrop-filter</code> glass nav</li>
-          </ul>
-        </aside>
-      </div>
-    </section>
-
     <!-- ============ HOW CAN I HELP ============ -->
     <section class="section" id="how-can-i-help">
       <div class="container">
@@ -386,6 +327,7 @@
     </div>
   </footer>
 
+  <script src="antigravity.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

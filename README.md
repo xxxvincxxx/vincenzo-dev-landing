@@ -14,6 +14,9 @@ The page itself is the portfolio piece — it uses the modern web platform direc
 - Native **CSS nesting**, **`:has()`** (mobile menu state), `color-mix()`, `text-wrap: balance`
 - Native `<details name>` exclusive accordion for the FAQ
 - `backdrop-filter` glass nav, `prefers-reduced-motion` support
+- `antigravity.js` — vanilla Canvas 2D port of react-bits' `<Antigravity />` hero
+  background (same particle math, no three.js/react dependency); configured in
+  `script.js`, disabled for reduced-motion users
 
 ## Run
 
