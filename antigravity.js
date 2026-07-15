@@ -23,6 +23,7 @@ class Antigravity {
       pulseSpeed: 3,
       particleShape: "capsule",
       fieldStrength: 10,
+      opacity: 1,
       ...options
     };
 
@@ -110,6 +111,7 @@ class Antigravity {
     const globalRotation = elapsed * o.rotationSpeed;
 
     ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+    ctx.globalAlpha = o.opacity;
     ctx.fillStyle = o.color;
     ctx.strokeStyle = o.color;
     ctx.lineCap = "round";

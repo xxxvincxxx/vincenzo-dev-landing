@@ -6,14 +6,15 @@ const antigravityCanvas = document.querySelector(".hero-antigravity");
 
 if (antigravityCanvas && window.Antigravity && !matchMedia("(prefers-reduced-motion: reduce)").matches) {
   new Antigravity(antigravityCanvas, {
-    count: 300,
+    count: 180,
     magnetRadius: 10,
     ringRadius: 10,
     waveSpeed: 0.4,
     waveAmplitude: 1,
-    particleSize: 2,
+    particleSize: 0.9,
     lerpSpeed: 0.1,
-    color: "#FF9FFC",
+    color: "#95bf47",
+    opacity: 0.28,
     autoAnimate: false,
     particleVariance: 1,
     rotationSpeed: 0,
