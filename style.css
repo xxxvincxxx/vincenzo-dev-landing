@@ -749,6 +749,192 @@ body:has(.menu-toggle[aria-expanded="true"]) {
   }
 }
 
+/* ---------- Selected work — Jitter-style layered cards ---------- */
+
+.section-work {
+  position: relative;
+}
+
+.work-heading h2 {
+  font-size: clamp(2.4rem, 6vw, 4rem);
+}
+
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: clamp(1.75rem, 4vw, 3rem);
+  /* room for the rotated cards to breathe without clipping neighbours */
+  padding-block: 1rem;
+}
+
+.work-card {
+  --shot: none;
+  --tilt: 0deg;
+  position: relative;
+  display: block;
+  text-decoration: none;
+  color: var(--ink);
+  border-radius: 18px;
+  rotate: var(--tilt);
+  transition: rotate 0.45s cubic-bezier(0.2, 0.8, 0.2, 1),
+              translate 0.45s cubic-bezier(0.2, 0.8, 0.2, 1),
+              scale 0.45s cubic-bezier(0.2, 0.8, 0.2, 1);
+  will-change: rotate, translate, scale;
+}
+
+/* Alternating tilts = the stacked "pile" look; they straighten on hover */
+.work-card:nth-child(1) { --tilt: -2.5deg; }
+.work-card:nth-child(2) { --tilt:  1.8deg; }
+.work-card:nth-child(3) { --tilt:  2.2deg; }
+.work-card:nth-child(4) { --tilt: -1.6deg; }
+
+.work-card:hover,
+.work-card:focus-visible {
+  --tilt: 0deg;
+  translate: 0 -8px;
+  scale: 1.02;
+  outline: none;
+  z-index: 2;
+}
+
+.work-frame {
+  display: block;
+  overflow: hidden;
+  border-radius: 18px;
+  border: 1px solid var(--line);
+  background: rgba(8, 18, 12, 0.9);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
+  transition: border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.work-card:hover .work-frame,
+.work-card:focus-visible .work-frame {
+  border-color: color-mix(in oklab, var(--green) 55%, transparent);
+  box-shadow:
+    0 30px 70px rgba(0, 0, 0, 0.5),
+    0 0 0 1px color-mix(in oklab, var(--green) 30%, transparent),
+    0 18px 60px rgba(149, 191, 71, 0.25);
+}
+
+.work-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.7rem 1rem;
+  border-bottom: 1px solid var(--line);
+
+  & i {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: var(--line);
+    flex-shrink: 0;
+  }
+
+  & i:nth-child(1) { background: #f87171; }
+  & i:nth-child(2) { background: #fbbf24; }
+  & i:nth-child(3) { background: #34d399; }
+
+  & em {
+    margin-left: 0.5rem;
+    font-family: var(--font-mono);
+    font-style: normal;
+    font-size: 0.72rem;
+    color: var(--muted);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+.work-shot {
+  display: block;
+  aspect-ratio: 16 / 10;
+  /* When --shot is a real screenshot url() it covers the placeholder gradient */
+  background-image:
+    var(--shot),
+    radial-gradient(120% 120% at 20% 0%, rgba(149, 191, 71, 0.28), transparent 55%),
+    radial-gradient(120% 120% at 100% 100%, rgba(94, 234, 212, 0.20), transparent 55%),
+    linear-gradient(135deg, #12271b, #0a1712);
+  background-size: cover, cover, cover, cover;
+  background-position: center;
+  transition: scale 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.work-card:hover .work-shot,
+.work-card:focus-visible .work-shot {
+  scale: 1.05;
+}
+
+.work-info {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  padding: 1.1rem 0.4rem 0;
+}
+
+.work-title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.15rem;
+}
+
+.work-tags {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+.work-arrow {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(120deg, var(--green), var(--emerald));
+  color: #04120a;
+  font-size: 1.2rem;
+  opacity: 0;
+  translate: 0 -6px;
+  transition: opacity 0.35s ease, translate 0.35s ease;
+}
+
+.work-card:hover .work-arrow,
+.work-card:focus-visible .work-arrow {
+  opacity: 1;
+  translate: 0 0;
+}
+
+.work-caption {
+  margin-top: 2.5rem;
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  color: var(--muted);
+
+  & a {
+    color: var(--green);
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+@media (max-width: 720px) {
+  .work-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .work-card {
+    --tilt: 0deg;
+  }
+}
+
 /* ---------- Technologies ---------- */
 
 .tech-groups {
