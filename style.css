@@ -552,7 +552,7 @@ body:has(.menu-toggle[aria-expanded="true"]) {
 /* ---------- Sections ---------- */
 
 .section {
-  padding-block: clamp(5rem, 10vw, 8.5rem);
+  padding-block: clamp(2.5rem, 5vw, 4.25rem);
 }
 
 .eyebrow {
