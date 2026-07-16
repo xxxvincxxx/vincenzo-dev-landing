@@ -788,6 +788,57 @@ body:has(.menu-toggle[aria-expanded="true"]) {
 .work-card:nth-child(3) { --tilt:  2.2deg; }
 .work-card:nth-child(4) { --tilt: -1.6deg; }
 
+/* Jitter-style spring entrance: cards pop in staggered, overshoot and
+   settle into their resting tilt. Time-based (not scroll-scrubbed), with a
+   spring curve expressed as a native CSS linear() easing. */
+.work-grid {
+  --spring: linear(
+    0, 0.008 1.1%, 0.031 2.2%, 0.129 4.8%, 0.257 7.2%, 0.671 14.2%,
+    0.789 16.5%, 0.881 18.6%, 0.957 20.7%, 1.019 22.8%, 1.063 25.1%,
+    1.094 27.7%, 1.107 30.7%, 1.103 34.3%, 1.051 43%, 1.017 52%,
+    1.003 61.5%, 1
+  );
+}
+
+/* Hidden until the grid scrolls into view (script.js flips the class) */
+.work-grid:not(.in-view) .work-card {
+  opacity: 0;
+}
+
+@keyframes work-card-pop {
+  from {
+    opacity: 0;
+    translate: 0 90px;
+    scale: 0.6;
+    rotate: calc(var(--tilt) * 4);
+  }
+  60% {
+    opacity: 1;
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+    scale: 1;
+    rotate: var(--tilt);
+  }
+}
+
+.work-grid.in-view .work-card {
+  /* backwards fill only: once the pop ends, normal styles (and the hover
+     transition on rotate/translate/scale) take over cleanly */
+  animation: work-card-pop 0.9s var(--spring) backwards;
+}
+
+.work-grid.in-view .work-card:nth-child(2) { animation-delay: 0.12s; }
+.work-grid.in-view .work-card:nth-child(3) { animation-delay: 0.24s; }
+.work-grid.in-view .work-card:nth-child(4) { animation-delay: 0.36s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .work-grid:not(.in-view) .work-card {
+    opacity: 1;
+  }
+}
+
 .work-card:hover,
 .work-card:focus-visible {
   --tilt: 0deg;

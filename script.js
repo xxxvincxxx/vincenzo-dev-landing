@@ -50,6 +50,29 @@ if (marqueeTrack) {
   marqueeTrack.innerHTML += marqueeTrack.innerHTML;
 }
 
+// ---------- Work cards: Jitter-style spring pop-in ----------
+// Time-based spring animation (see work-card-pop in style.css), fired once
+// when the grid enters the viewport.
+const workGrid = document.querySelector(".work-grid");
+
+if (workGrid) {
+  if ("IntersectionObserver" in window && !matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    const workObserver = new IntersectionObserver(
+      (entries) => {
+        if (entries.some((entry) => entry.isIntersecting)) {
+          workGrid.classList.add("in-view");
+          workObserver.disconnect();
+        }
+      },
+      { threshold: 0.2 }
+    );
+
+    workObserver.observe(workGrid);
+  } else {
+    workGrid.classList.add("in-view");
+  }
+}
+
 // ---------- Reveal fallback ----------
 // Reveals are pure CSS scroll-driven animations where supported;
 // this IntersectionObserver covers the remaining browsers.
