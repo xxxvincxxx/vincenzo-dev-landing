@@ -908,7 +908,7 @@ body:has(.menu-toggle[aria-expanded="true"]) {
     radial-gradient(120% 120% at 100% 100%, rgba(94, 234, 212, 0.20), transparent 55%),
     linear-gradient(135deg, #12271b, #0a1712);
   background-size: cover, cover, cover, cover;
-  background-position: center;
+  background-position: var(--shot-pos, center);
   transition: scale 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
