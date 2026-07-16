@@ -28,10 +28,10 @@
 
       <nav class="main-nav" aria-label="Main navigation">
         <ul>
-          <li><a href="#who-am-i">Who am I</a></li>
-          <li><a href="#what-i-do">What I do</a></li>
           <li><a href="#work">Work</a></li>
           <li><a href="#how-can-i-help">How I can help</a></li>
+          <li><a href="#who-am-i">Who am I</a></li>
+          <li><a href="#what-i-do">What I do</a></li>
         </ul>
       </nav>
 
@@ -82,26 +82,6 @@
           <p>Trusted by <strong>[XX]+ merchants &amp; agencies</strong></p>
         </div>
 
-        <div class="hero-code reveal" aria-hidden="true">
-          <div class="code-window">
-            <div class="code-bar">
-              <span></span><span></span><span></span>
-              <em>sections/hero.liquid</em>
-            </div>
-            <pre><code><span class="c-tag">{% schema %}</span>
-{
-  <span class="c-key">"name"</span>: <span class="c-str">"Conversion-first hero"</span>,
-  <span class="c-key">"settings"</span>: [
-    { <span class="c-key">"type"</span>: <span class="c-str">"text"</span>, <span class="c-key">"id"</span>: <span class="c-str">"heading"</span> }
-  ]
-}
-<span class="c-tag">{% endschema %}</span>
-
-<span class="c-com">// zero layout shift, 100/100 CWV</span>
-<span class="c-kw">const</span> storefront = <span class="c-fn">await</span> <span class="c-fn">build</span>({ fast: <span class="c-kw">true</span> });</code></pre>
-          </div>
-        </div>
-
       </div>
     </section>
 
@@ -113,107 +93,6 @@
         <span>GSAP</span><span>Core Web Vitals</span><span>Figma</span><span>Metaobjects</span>
       </div>
     </div> ============ -->
-
-    <!-- ============ WHO AM I ============ -->
-    <section class="section" id="who-am-i">
-      <div class="container about-grid">
-        <div class="about-visual reveal">
-          <div class="portrait-frame">
-            <img
-              class="portrait-photo"
-              src="img/portrait.jpg"
-              alt="Portrait of Vincenzo Grasso, frontend developer"
-              width="500" height="500"
-            >
-          </div>
-          <div class="portrait-card">
-            <strong>Vincenzo Grasso</strong>
-            <span>Frontend Developer · Shopify specialist</span>
-          </div>
-        </div>
-
-        <div class="about-copy">
-          <p class="eyebrow reveal">Who am I</p>
-          <h2 class="reveal">The developer behind<br>the <span class="gradient-text">storefronts</span>.</h2>
-
-          <p class="reveal">
-            [Placeholder — Two or three sentences about you: your background,
-            how you got into frontend development and why you chose to
-            specialize in the Shopify ecosystem.]
-          </p>
-          <p class="reveal">
-            [Placeholder — What makes you different: your approach to code
-            quality, performance budgets, collaboration with designers and
-            merchants, remote work, etc.]
-          </p>
-
-          <div class="stats-row reveal">
-            <article>
-              <strong data-count>[7]+</strong>
-              <span>years of frontend</span>
-            </article>
-            <article>
-              <strong data-count>[40]+</strong>
-              <span>stores shipped</span>
-            </article>
-            <article>
-              <strong data-count>[95]+</strong>
-              <span>avg. Lighthouse score</span>
-            </article>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ WHAT I DO ============ -->
-    <section class="section" id="what-i-do">
-      <div class="container">
-        <div class="section-heading reveal">
-          <p class="eyebrow">What I do</p>
-          <h2>Everything a modern<br>Shopify store <span class="gradient-text">needs</span>.</h2>
-        </div>
-
-        <div class="bento-grid">
-          <article class="bento-card bento-large reveal">
-            <span class="card-icon" aria-hidden="true">◈</span>
-            <h3>Custom Shopify themes</h3>
-            <p>[Placeholder — Pixel-perfect themes built from scratch or from Figma designs.
-               Online Store 2.0, JSON templates, flexible sections merchants actually enjoy using.]</p>
-            <ul class="card-tags">
-              <li>Liquid</li><li>OS 2.0</li><li>Sections</li>
-            </ul>
-          </article>
-
-          <article class="bento-card reveal">
-            <span class="card-icon" aria-hidden="true">⚡</span>
-            <h3>Performance &amp; CWV</h3>
-            <p>[Placeholder — Speed audits, refactoring and Core Web Vitals optimization
-               that move the needle on conversion.]</p>
-          </article>
-
-          <article class="bento-card reveal">
-            <span class="card-icon" aria-hidden="true">◍</span>
-            <h3>Headless storefronts</h3>
-            <p>[Placeholder — Hydrogen and Storefront API builds when a theme
-               isn’t enough: custom frontends with app-like UX.]</p>
-          </article>
-
-          <article class="bento-card reveal">
-            <span class="card-icon" aria-hidden="true">✦</span>
-            <h3>Conversion-focused UI</h3>
-            <p>[Placeholder — Landing pages, PDP improvements and A/B-testable
-               sections designed to sell, not just look pretty.]</p>
-          </article>
-
-          <article class="bento-card reveal">
-            <span class="card-icon" aria-hidden="true">⇄</span>
-            <h3>Migrations &amp; replatforming</h3>
-            <p>[Placeholder — Moving from WooCommerce, Magento or a legacy theme to Shopify
-               without losing SEO, data or your sanity. Includes redirects, metafields and content mapping.]</p>
-          </article>
-        </div>
-      </div>
-    </section>
 
     <!-- ============ SELECTED WORK ============ -->
     <section class="section section-work" id="work">
@@ -346,6 +225,107 @@
       </div>
     </section>
 
+    <!-- ============ WHO AM I ============ -->
+    <section class="section" id="who-am-i">
+      <div class="container about-grid">
+        <div class="about-visual reveal">
+          <div class="portrait-frame">
+            <img
+              class="portrait-photo"
+              src="img/portrait.jpg"
+              alt="Portrait of Vincenzo Grasso, frontend developer"
+              width="500" height="500"
+            >
+          </div>
+          <div class="portrait-card">
+            <strong>Vincenzo Grasso</strong>
+            <span>Frontend Developer · Shopify specialist</span>
+          </div>
+        </div>
+
+        <div class="about-copy">
+          <p class="eyebrow reveal">Who am I</p>
+          <h2 class="reveal">The developer behind<br>the <span class="gradient-text">storefronts</span>.</h2>
+
+          <p class="reveal">
+            [Placeholder — Two or three sentences about you: your background,
+            how you got into frontend development and why you chose to
+            specialize in the Shopify ecosystem.]
+          </p>
+          <p class="reveal">
+            [Placeholder — What makes you different: your approach to code
+            quality, performance budgets, collaboration with designers and
+            merchants, remote work, etc.]
+          </p>
+
+          <div class="stats-row reveal">
+            <article>
+              <strong data-count>[7]+</strong>
+              <span>years of frontend</span>
+            </article>
+            <article>
+              <strong data-count>[40]+</strong>
+              <span>stores shipped</span>
+            </article>
+            <article>
+              <strong data-count>[95]+</strong>
+              <span>avg. Lighthouse score</span>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ WHAT I DO ============ -->
+    <section class="section" id="what-i-do">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">What I do</p>
+          <h2>Everything a modern<br>Shopify store <span class="gradient-text">needs</span>.</h2>
+        </div>
+
+        <div class="bento-grid">
+          <article class="bento-card bento-large reveal">
+            <span class="card-icon" aria-hidden="true">◈</span>
+            <h3>Custom Shopify themes</h3>
+            <p>[Placeholder — Pixel-perfect themes built from scratch or from Figma designs.
+               Online Store 2.0, JSON templates, flexible sections merchants actually enjoy using.]</p>
+            <ul class="card-tags">
+              <li>Liquid</li><li>OS 2.0</li><li>Sections</li>
+            </ul>
+          </article>
+
+          <article class="bento-card reveal">
+            <span class="card-icon" aria-hidden="true">⚡</span>
+            <h3>Performance &amp; CWV</h3>
+            <p>[Placeholder — Speed audits, refactoring and Core Web Vitals optimization
+               that move the needle on conversion.]</p>
+          </article>
+
+          <article class="bento-card reveal">
+            <span class="card-icon" aria-hidden="true">◍</span>
+            <h3>Headless storefronts</h3>
+            <p>[Placeholder — Hydrogen and Storefront API builds when a theme
+               isn’t enough: custom frontends with app-like UX.]</p>
+          </article>
+
+          <article class="bento-card reveal">
+            <span class="card-icon" aria-hidden="true">✦</span>
+            <h3>Conversion-focused UI</h3>
+            <p>[Placeholder — Landing pages, PDP improvements and A/B-testable
+               sections designed to sell, not just look pretty.]</p>
+          </article>
+
+          <article class="bento-card reveal">
+            <span class="card-icon" aria-hidden="true">⇄</span>
+            <h3>Migrations &amp; replatforming</h3>
+            <p>[Placeholder — Moving from WooCommerce, Magento or a legacy theme to Shopify
+               without losing SEO, data or your sanity. Includes redirects, metafields and content mapping.]</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <!-- ============ FAQ ============ -->
     <section class="section section-faq">
       <div class="container faq-layout">
@@ -389,10 +369,10 @@
 
       <div>
         <h3>Explore</h3>
-        <a href="#who-am-i">Who am I</a>
-        <a href="#what-i-do">What I do</a>
         <a href="#work">Work</a>
         <a href="#how-can-i-help">How I can help</a>
+        <a href="#who-am-i">Who am I</a>
+        <a href="#what-i-do">What I do</a>
       </div>
 
       <div>
